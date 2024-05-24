@@ -1,0 +1,7 @@
+name: subdomain
+build:
+  subdomain:
+    context: ./
+    dockerfile: infra/Dockerfile
+deploy:
+  - echo "Running deploy actions!"
