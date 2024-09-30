@@ -3,7 +3,6 @@ name: okteto-test-build
 deploy:
   remote: true
   commands:
-#    - curl https://get.okteto.com -sSfL | OKTETO_VERSION=2.31.0 sh
-    - curl https://get.okteto.com -sSfL | OKTETO_CHANNEL=beta sh
+    - curl https://get.okteto.com -sSfL | OKTETO_VERSION=2.31.0 sh
     - okteto destroy --log-level debug --file backend/test_domain/okteto.yml
     - okteto deploy --build --log-level debug --file backend/test_domain/okteto.yml 
