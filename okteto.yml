@@ -1,6 +1,6 @@
 name: okteto-test-build
 
 deploy:
-  remote: false
+  remote: true
   commands:
     - okteto deploy --build --log-level debug --file backend/test_domain/okteto.yml --name subdomain
