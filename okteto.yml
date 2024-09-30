@@ -3,6 +3,6 @@ name: okteto-test-build
 deploy:
   remote: false
   commands:
-    - okteto destroy --log-level debug --file backend/test_domain/okteto.yml
-    - okteto deploy --build --log-level debug --file backend/test_domain/okteto.yml
+    - okteto destroy --log-level debug --file backend/test_domain/okteto.yml --name subdomain
+    - okteto deploy --build --log-level debug --file backend/test_domain/okteto.yml 
     # Setting: "--name subdomain" will fix it
